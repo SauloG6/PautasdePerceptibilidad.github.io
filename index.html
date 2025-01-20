@@ -6,13 +6,16 @@
     <meta name="description" content="Emprendimiento de venta de laptops con calidad garantizada y excelentes precios.">
     <title>Emprendimiento de Laptops</title>
     <style>
+        /* Estilos generales */
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
             background-color: #f9f9f9;
             color: #333;
             margin: 0;
-            padding: 0;
+            padding: 0 10px;
+            max-width: 1200px;
+            margin: auto; /* Centrar el contenido */
         }
         header {
             background-color: #0073e6;
@@ -20,22 +23,42 @@
             padding: 15px;
             text-align: center;
         }
+        nav {
+            background-color: #f1f1f1;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+        nav a {
+            text-decoration: none;
+            color: #0073e6;
+            padding: 8px 15px;
+        }
+        nav a:hover, nav a:focus {
+            background-color: #0073e6;
+            color: white;
+            border-radius: 5px;
+        }
         .container {
             padding: 20px;
         }
-        img {
+        img, video {
             max-width: 100%;
             height: auto;
         }
         video {
             display: block;
-            margin: 20px auto; /* Centrar horizontalmente */
-            max-width: 100%;
-            height: auto; /* Mantener la proporción automática */
-            width: 400px;  /* Nuevo ancho del video */
-            height: 300px; /* Nueva altura del video */
+            margin: 20px auto;
         }
         table {
+            display: block; /* Scroll horizontal */
+            overflow-x: auto;
             width: 100%;
             border-collapse: collapse;
             margin: 20px 0;
@@ -44,6 +67,7 @@
             border: 1px solid #ddd;
             padding: 10px;
             text-align: left;
+            white-space: nowrap; /* Evitar salto de línea */
         }
         table th {
             background-color: #0073e6;
@@ -58,7 +82,7 @@
         }
         .centered-image {
             display: block;
-            margin: 0 auto; /* Centrar horizontalmente */
+            margin: 0 auto;
         }
         figure {
             text-align: center;
@@ -69,6 +93,11 @@
             color: #555;
             margin-top: 10px;
         }
+        /* Resaltado para enfoque de teclado */
+        :focus {
+            outline: 3px solid #0073e6;
+            outline-offset: 2px;
+        }
     </style>
 </head>
 <body>
@@ -76,8 +105,16 @@
         <h1 tabindex="0">TechNova</h1>
     </header>
 
+    <nav>
+        <ul>
+            <li><a href="#acerca" tabindex="0">Acerca de nosotros</a></li>
+            <li><a href="#catalogo" tabindex="0">Catálogo</a></li>
+            <li><a href="#experiencia" tabindex="0">Experiencia</a></li>
+        </ul>
+    </nav>
+
     <div class="container">
-        <section>
+        <section id="acerca">
             <h2 tabindex="0">Acerca de nosotros</h2>
             <p tabindex="0">Somos un equipo especializado en la venta de laptops de alta calidad. Nuestro objetivo es ofrecer equipos confiables para satisfacer las necesidades de estudiantes, profesionales y empresas.</p>
         </section>
@@ -89,7 +126,7 @@
             </figure>
         </section>
 
-        <section>
+        <section id="catalogo">
             <h2 tabindex="0">Catálogo de Laptops</h2>
             <table>
                 <thead>
@@ -119,7 +156,7 @@
             </table>
         </section>
 
-        <section>
+        <section id="experiencia">
             <h2 tabindex="0">Experiencia profesional</h2>
             <p tabindex="0">Contamos con más de 5 años en el mercado, trabajando con marcas reconocidas como Dell, HP, Lenovo, y Apple. Nos enorgullece ofrecer productos certificados y un excelente servicio postventa.</p>
         </section>
